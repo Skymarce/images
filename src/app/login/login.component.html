@@ -1,0 +1,7 @@
+<form class="login" [formGroup]="loginForm">
+    <div class="login-wrapper">
+        <input type="text" formControlName="email" placeholder="Введите логин..."/>
+        <input type="password" formControlName="password" placeholder="Введите пароль..."/>
+        <button class="login" type="submit" (click)="submit()">Войти</button>
+    </div>
+</form>

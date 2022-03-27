@@ -1,0 +1,16 @@
+<header class="header">
+    <div class="header-wrapper">
+        <button class="header-logout" (click)="logout()">Выйти</button>
+    </div>
+</header>
+
+<div class="aside">
+    <button class="aside-favorites" routerLink="/dashboard/favorites" routerLinkActive="active">
+        <mat-icon class="aside-icon">favorite</mat-icon>    
+    </button>
+    <button class="aside-search" routerLinkActive="active">
+        <mat-icon class="aside-icon" routerLink="/dashboard/search">search</mat-icon>
+    </button>
+</div>
+
+<router-outlet></router-outlet>

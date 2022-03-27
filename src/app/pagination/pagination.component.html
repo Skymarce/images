@@ -1,0 +1,8 @@
+<section class="pagination">
+    <button class="pagination-prev" [disabled]="checkPage()" (click)="goToPrevPage()"><</button>
+    <div class="pagination-wrapper">
+        <input class="pagination-input" #pageInput type="number" [(ngModel)]="pageNumber" (input)="changePage()">
+        <input class="pagination-input" type="number" value="{{total}}" [disabled]="true">
+    </div>
+    <button class="pagination-next" (click)="goToNextPage()">></button>
+</section>

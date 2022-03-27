@@ -1,0 +1,35 @@
+.header {
+    height: 60px;
+    background-color: #FFE24D;
+    &-wrapper {
+        height: 60px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &-logout {
+        width: 100px;
+        height: 30px;
+        background-color: #EDF1F6;
+        border: none;
+        outline: none;
+    }
+}
+
+.aside {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-favorites, &-search {
+        margin-top: 10px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+    }
+}

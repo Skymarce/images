@@ -1,0 +1,31 @@
+<div class="search">
+    <h3 class="search-title">Поиск изображений</h3>
+    <div class="search-input">
+        <input 
+            name="search" 
+            type="text" 
+            placeholder="Введите название изображения" 
+            (input)="searchImage()"
+            #searchTerm/>
+            <!-- <mat-icon class="search-clear" (click)="clearSearch()">clear</mat-icon> -->
+        
+    </div>
+    <ng-container *ngIf="searchValue === ''; then searchInput; else result"></ng-container>
+    <ng-template #searchInput>
+        <small class="search-info">Попробуйте что-нибудь найти</small>
+    </ng-template>
+    <ng-template #result>
+        <section class="result">
+            <div class="result-card" *ngFor="let image of imagesData">
+                <div class="result-img">
+                    <img src="{{image.url_q}}" />
+                </div>
+                <button class="result-btn" (click)="addToFavorites(image)">Добавить в избранные</button>
+            </div>
+        </section>
+    </ng-template>
+</div>
+
+<ng-template [ngIf]="isPagination === true">
+    <app-pagination [pageNumber]="pageNumber" [total]="total" (pageEvent)="searchImage($event)"></app-pagination>
+</ng-template>

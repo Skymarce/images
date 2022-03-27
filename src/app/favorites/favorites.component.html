@@ -1,0 +1,8 @@
+<section class="result" *ngIf="images">
+    <div class="result-card" *ngFor="let image of images">
+        <div class="result-img" >
+            <img src="{{image.url_q}}" />
+        </div>
+        <button class="result-btn" (click)="remove(image.fbId)">Удалить</button>
+    </div>
+</section>
